@@ -22,16 +22,3 @@ async function ProfileDetails({ params }) {
 
 export default ProfileDetails;
 
-export async function generateMetadata({ params }) {
-  await connectDB();
-  const { profileDetailId } = params;
-  const profile = await Profile.findOne({ _id: profileDetailId }).select(
-    "-userId"
-  );
-
-  return {
-    title: profile.title,
-    description: profile.description,
-    keywords: profile.keywords,
-  };
-}

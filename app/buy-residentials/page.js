@@ -7,6 +7,7 @@ export const metadata = {
   description: "خرید و فروش املاک | نمونه کار",
   keywords: "خرید و فروش املاک | نمونه کار",
 };
+export const dynamic = "force-dynamic";
 
 async function BuyResidentials({ searchParams }) {
   await connectDB();
