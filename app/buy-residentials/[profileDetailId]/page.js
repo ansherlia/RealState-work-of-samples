@@ -11,6 +11,7 @@ import connectDB from "@/utils/connectDB";
 //   return params;
 // }
 async function ProfileDetails({ params }) {
+  await connectDB();
   const { profileDetailId } = params;
   // const res = await fetch(`http://localhost:3000/api/profile/${profileId}`);
   // const profile = await res.json();o
