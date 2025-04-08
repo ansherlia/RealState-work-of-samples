@@ -25,7 +25,7 @@ function AddProfilePage({ data }) {
   });
   useEffect(() => {
     if (data) setProfile(data);
-  }, []);
+  }, [data]);
   const editHandler = async () => {
     setLoading(true);
     const res = await fetch(`/api/profile/`, {

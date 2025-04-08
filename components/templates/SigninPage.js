@@ -20,12 +20,12 @@ function SigninPage() {
     });
     setLoading(false);
     if (!result.ok) {
-      toast.error(result.error, {
+      toast.error("مشکلی پیش آمده است.", {
         position: "top-left",
       });
     } else {
       toast.success("ورود با موفقیت انجام شد.", {
-        position: "top-left",
+        position: "top-left", 
       });
       router.push("/dashboard");
     }

@@ -152,3 +152,17 @@ export async function PATCH(request, context) {
   );
 }
 
+export async function GET() {
+  try {
+    await connectDB();
+
+    const profiles = await Profile.find({ published: true }).select("-userId");
+
+    return new Response(JSON.stringify({ data: profiles }, { status: 200 }));
+  } catch (error) {
+    console.log(error);
+    return new Response(
+      JSON.stringify({ status: 500 }, { error: "مشکلی در سرور رخ داده است." })
+    );
+  }
+}

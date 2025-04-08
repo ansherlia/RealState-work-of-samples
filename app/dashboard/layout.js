@@ -8,10 +8,11 @@ export const metadata = {
   title: "پنل کاربری املاک | نمونه کار",
 };
 async function Layout({ children }) {
-  await connectDB();
+  await connectDB()
   const session = await getServerSession(authOptions);
   if (!session) redirect("/");
-  const user = await User?.findOne({ email: session.user.email });
+  const user = await User.findOne({ email: session.user.email });
+  if (!user) <h3>مشکلی پیش آمده است.</h3>;
 
   return (
     <DashboardSidebar user={JSON.parse(JSON.stringify(user))}>
