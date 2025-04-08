@@ -80,7 +80,7 @@ function Header() {
                   </li>
                   <li>
                     {" "}
-                    <Link href="/buy-residential" className="">
+                    <Link href="/buy-residentials" className="">
                       آگهی ها
                     </Link>
                   </li>
