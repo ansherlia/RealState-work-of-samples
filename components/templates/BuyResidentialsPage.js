@@ -3,8 +3,8 @@ import Sidebar from "../modules/Sidebar";
 
 function BuyResidentialsPage({ data }) {
   return (
-    <div className="container flex flex-col sm:flex-row gap-x-10  pt-[120px]">
-      <div className="w-[200px] h-fit shadow-xl bg-white mt-4 rounded-lg">
+    <div className="container flex flex-col justify-center sm:flex-row gap-x-10 pt-5 md:pt-[120px]">
+      <div className="mx-auto md:w-[200px] h-fit shadow-xl bg-white mt-4 rounded-lg">
         <Sidebar />
       </div>
       <div>
