@@ -53,7 +53,7 @@ function Header() {
               <GiHamburgerMenu fontSize={24} color="#FED7A7" />
             </span>
             {isOpen ? (
-              <div className="w-[250px] fixed right-0 top-0 bg-white/80 h-[450px] transition-all delay-300 duration-500">
+              <div className="w-[250px] fixed right-0 top-0 bg-white h-full transition-all delay-300 duration-500">
                 <span
                   onClick={() => setIsOpen(false)}
                   className="cursor-pointer"
